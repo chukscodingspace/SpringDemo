@@ -1,8 +1,8 @@
 pipeline{
     agent { dockerfile true}
     stages{
-        stage('Test'){
-            Steps {
+        stage('Test') {
+            steps {
                 sh '''
                 docker --version
                 git --version
