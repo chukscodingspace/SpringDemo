@@ -1,25 +1,14 @@
 pipeline{
-    agent any
+    agent { dockerfile true}
     stages{
-        stage('Compile Stage'){
+        stage('Test'){
             Steps {
-
+                sh '''
+                docker --version
+                git --version
+                '''
             }
         }
     }
-    stages{
-        stage('Testing Stage'){
-            Steps {
-                
-            }
-        }
-    }
-    stages{
-        stage('Deployment Stage'){
-            Steps {
-                
-            }
-        }
-    }
-
+   
 }
