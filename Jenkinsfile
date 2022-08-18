@@ -10,7 +10,7 @@
         }
          stage('Build image') {
             steps {
-               sh ' docker build . '
+               sh 'echo hello world '
              }
         }
      }
