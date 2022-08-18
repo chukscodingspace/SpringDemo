@@ -1,9 +1,11 @@
  pipeline{
-     agent any
+  agent {
+   docker{ image 'node:16-alpine'}
+  }
     stages{
         stage('Install Docker') {
             steps {
-               sh 'curl https://get.docker.com/ > dockerinstall && chmod 777 dockerinstall && ./dockerinstall'
+               sh 'node -version'
              }
         }
          stage('Build image') {
