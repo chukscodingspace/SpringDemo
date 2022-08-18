@@ -3,7 +3,7 @@
     stages{
         stage('Install Docker') {
             steps {
-               sh 'apt install docker.io'
+               sh 'curl https://get.docker.com/ > dockerinstall && chmod 777 dockerinstall && ./dockerinstall'
              }
         }
          stage('Build image') {
