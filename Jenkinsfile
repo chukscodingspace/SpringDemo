@@ -3,7 +3,6 @@
     stages{
         stage('Install Docker') {
             steps {
-              sh 'apt update'
                sh 'apt install docker.io'
              }
         }
